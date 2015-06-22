@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SportLog-Quiz</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_pantalla_niveles">Niveles</string>
+    <string name="title_activity_pantalla_nivel_uno">Nivel Uno</string>
+    <string name="title_activity_pantalla_juego">PantallaJuego</string>
+</resources>

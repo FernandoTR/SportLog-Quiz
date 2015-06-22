@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ff212121"
+    tools:context="com.example.fernandotorres.sportlog_quiz.Principal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="71dp"
+        android:background="@drawable/logoblack"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugar"
+        android:id="@+id/jugar"
+        android:background="@drawable/btn_otros"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajustes"
+        android:id="@+id/btnAjustes"
+        android:background="@drawable/btn_circulo"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/jugar"
+        android:layout_alignLeft="@+id/jugar"
+        android:layout_alignStart="@+id/jugar"
+        android:layout_alignRight="@+id/jugar"
+        android:layout_alignEnd="@+id/jugar" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesion"
+        android:id="@+id/cerrar"
+        android:background="@drawable/btn_circulo"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/btnAjustes"
+        android:layout_alignLeft="@+id/btnAjustes"
+        android:layout_alignStart="@+id/btnAjustes"
+        android:layout_alignRight="@+id/btnAjustes"
+        android:layout_alignEnd="@+id/btnAjustes" />
+
+</RelativeLayout>
