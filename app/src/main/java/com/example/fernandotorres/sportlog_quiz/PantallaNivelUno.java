@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +20,7 @@ public class PantallaNivelUno extends AppCompatActivity {
     Toolbar toolbar;
     ActionBar actionBar;
     TextView textView;
-
+    Button btnRealMadrid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,16 @@ public class PantallaNivelUno extends AppCompatActivity {
         if (navigationView != null) {
             setupNavigationDrawerContent(navigationView);
         }
+
+        btnRealMadrid = (Button)findViewById(R.id.btnRealMadrid);
+        btnRealMadrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(PantallaNivelUno.this, PantallaJuego.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     @Override

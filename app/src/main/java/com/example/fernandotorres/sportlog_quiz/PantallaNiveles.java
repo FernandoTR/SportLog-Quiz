@@ -1,5 +1,7 @@
 package com.example.fernandotorres.sportlog_quiz;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -99,7 +101,21 @@ public class PantallaNiveles extends AppCompatActivity {
                                 return true;
                             case R.id.item_navigation_drawer_help_and_feedback:
                                 menuItem.setChecked(true);
-                                Toast.makeText(PantallaNiveles.this, menuItem.getTitle().toString(), Toast.LENGTH_SHORT).show();
+                               /* Toast.makeText(PantallaNiveles.this, menuItem.getTitle().toString(), Toast.LENGTH_SHORT).show();*/
+
+
+                                        SharedPreferences settings = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString("NAME", "");
+                                        editor.putString("PASS", "");
+
+                                        editor.commit();
+
+                                        Intent i = new Intent(PantallaNiveles.this, Login.class);
+                                        startActivity(i);
+                                        finish();
+
+
                                 drawerLayout.closeDrawer(GravityCompat.START);
                                 return true;
                         }

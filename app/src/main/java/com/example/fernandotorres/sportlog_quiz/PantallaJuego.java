@@ -4,16 +4,36 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class PantallaJuego extends ActionBarActivity {
-
+    EditText texto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_juego);
+        texto = (EditText)findViewById(R.id.texto);
+    }
+    public void boton1(View v)
+    {
+        Button b = (Button) v;
+        texto.setText(texto.getText().toString() + b.getText().toString());
+        b.setVisibility(View.INVISIBLE);
+        String valida;
+        valida = texto.getText().toString();
+        if (valida=="REALMADRID"){
+            Toast.makeText(this,"Es correcto", Toast.LENGTH_LONG).show();
+        }
+
     }
 
+    public void comparacion(View v){
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
