@@ -40,6 +40,10 @@
             android:name=".PantallaJuego"
             android:label="@string/title_activity_pantalla_juego" >
         </activity>
+        <activity
+            android:name=".PantallaJuegoDos"
+            android:label="@string/title_activity_pantalla_juego_dos" >
+        </activity>
     </application>
 
 </manifest>

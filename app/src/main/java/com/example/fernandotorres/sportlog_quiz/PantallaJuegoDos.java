@@ -11,13 +11,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class PantallaJuego extends ActionBarActivity {
+public class PantallaJuegoDos extends ActionBarActivity {
     EditText texto;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_juego);
+        setContentView(R.layout.activity_pantalla_juego_dos);
         texto = (EditText)findViewById(R.id.texto);
     }
     public void boton1(View v)
@@ -27,22 +26,18 @@ public class PantallaJuego extends ActionBarActivity {
         b.setVisibility(View.INVISIBLE);
         String valida;
         valida = texto.getText().toString();
-        if(valida.equals("REALMADRID")){
-            Toast.makeText(this,"Es correcto", Toast.LENGTH_LONG).show();
-            Intent i = new Intent(PantallaJuego.this, PantallaJuegoDos.class);
+        if(valida.equals("BARCELONA")){
+            Toast.makeText(this, "Es correcto", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(PantallaJuegoDos.this, PantallaNivelUno.class);
             startActivity(i);
             finish();
         }
     }
 
-    public void botonA(View v){
-
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_pantalla_juego, menu);
+        getMenuInflater().inflate(R.menu.menu_pantalla_juego_dos, menu);
         return true;
     }
 

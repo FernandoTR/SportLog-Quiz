@@ -9,4 +9,5 @@
     <string name="title_activity_pantalla_niveles">Niveles</string>
     <string name="title_activity_pantalla_nivel_uno">Nivel Uno</string>
     <string name="title_activity_pantalla_juego">PantallaJuego</string>
+    <string name="title_activity_pantalla_juego_dos">PantallaJuegoDos</string>
 </resources>

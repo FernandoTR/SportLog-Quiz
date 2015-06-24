@@ -21,6 +21,7 @@ public class PantallaNivelUno extends AppCompatActivity {
     ActionBar actionBar;
     TextView textView;
     Button btnRealMadrid;
+    Button btnBarca;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +49,14 @@ public class PantallaNivelUno extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        btnBarca = (Button)findViewById(R.id.btnBarcelona);
+        btnBarca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(PantallaNivelUno.this, PantallaJuegoDos.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
